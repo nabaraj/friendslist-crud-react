@@ -302,7 +302,7 @@ export default function FriendListComponent() {
     <div className="container">
       <div
         className={`modal fade ${modalConfig.show ? 'show' : ''}`}
-        tabindex="-1"
+        tabIndex="-1"
         aria-hidden="true"
         style={{ display: modalConfig.show ? 'block' : '' }}
       >
@@ -322,11 +322,11 @@ export default function FriendListComponent() {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">{modalConfig.content}</div>
-            <div class="modal-footer">
+            <div className="modal-body">{modalConfig.content}</div>
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-dismiss="modal"
                 onClick={modalConfig.onOk}
               >
@@ -334,7 +334,7 @@ export default function FriendListComponent() {
               </button>
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={modalConfig.onCancel}
               >
                 Nevermind
@@ -350,6 +350,7 @@ export default function FriendListComponent() {
             type="text"
             className="form-control"
             placeholder="Enter your friend name"
+            aria-label="Enter your friend name"
             value={friendName}
             onChange={(e) => {
               setFriendName(e.target.value);
@@ -374,7 +375,7 @@ export default function FriendListComponent() {
         </button>
       </div>
       {filteredList.length > 0 ? (
-        <ul className="list-group">
+        <ul id="friendList" className="list-group">
           {filteredList
             .slice(pageIndex.startIndex, pageIndex.endIndex)
             .map((item, index) => (
@@ -423,7 +424,7 @@ export default function FriendListComponent() {
           <ul className="pagination pagination-sm">{generatePagination()}</ul>
         </nav>
       )}
-      {modalConfig.show && <div class={`modal-backdrop fade show`}></div>}
+      {modalConfig.show && <div className={`modal-backdrop fade show`}></div>}
     </div>
   );
 }
