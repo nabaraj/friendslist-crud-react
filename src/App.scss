@@ -1,0 +1,20 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+.form-control:focus{
+  border-color: #343a40;
+  box-shadow:  0 0 0.2rem rgba(52, 58, 64, .25);
+}
+.rounded-left-0{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.rounded-right-0{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.list-group-item{
+  &:hover{
+   background-color: rgba(52, 58, 64, .10);
+  }
+}
