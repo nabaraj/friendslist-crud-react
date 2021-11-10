@@ -182,7 +182,7 @@ export default function FriendListComponent() {
         <li className={`page-item`} key={i}>
           <button
             className={`btn rounded-0 ${
-              pageNumber === i ? 'btn-dark' : 'btn-outline-dark'
+              pageNumber === i ? 'btn-success' : 'btn-outline-dark'
             } `}
             onClick={() => setPage(i)}
           >
